@@ -4,12 +4,9 @@ function volume_sphere() {
 		event.preventDefault();
 		let radius = document.getElementById("radius").value;
 		radius = Number(radius);
-		if(isNaN(radius) || radius<0){
-			alert("Invalid input");
-			return;
-		}
+				
 		let volume = 4/3 * Math.PI*radius*radius*radius;
-		volume = volume.toFixed(4)
+		volume = Number(volume).toFixed(4)
 		document.getElementById("volume").value = volume;
 	})
   
